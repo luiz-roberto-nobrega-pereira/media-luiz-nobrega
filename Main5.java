@@ -10,18 +10,25 @@ public class Main5
 		System.out.println();
 		System.out.println("Informe o seu nome: ");
 		String nome = sc.nextLine();
+		System.out.println("Cadastre seu login com os tres primeiros digitos do seu CPF: ");
+		int login = sc.nextInt();
 		System.out.println("Cadastre uma senha com quatro números: ");
 		int senha = sc.nextInt();
 		
+		System.out.println("Informe o seu login cadastrado: ");
+		int loginCadastrado = sc.nextInt();
+		while(login != loginCadastrado) {
+		    System.out.println("Informe o seu login novamente: ");
+		    loginCadastrado = sc.nextInt();
+		}
 		System.out.println("Informe a sua senha cadastrada: ");
-		int senhaCadastrada = sc.nextInt();
-		
+		int senhaCadastrada = sc.nextInt();		
 		while(senhaCadastrada != senha) {
 		    System.out.println("Informe a sua senha cadastrada novamente: ");
 		    senhaCadastrada = sc.nextInt();
 		}
 		System.out.println("Dados:");
-		System.out.printf("NOME: %s %nSENHA: %d %n",nome,senha);
+		System.out.printf("LOGIN: %s %nSENHA: %d %n",login,senha);
 		System.out.println("Informe a disciplina: 'digite 1 para matematica, 2 para fisica' ");
 		int disciplina = sc.nextInt();
 		if(disciplina == 1) {
